@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite1" parallel="none">
+	<test name="Test on firefox">
+    	<parameter name="browser" value="FIREFOX" />
+    	<classes>
+      		<class name="tests.test"/>
+    	</classes>
+  	</test>	
+	<!--<test name="Test on chrome">
+		<parameter name="browser" value="CHROME" />
+    	<classes>
+      		<class name="tests.test"/>
+    	</classes>
+  	</test>
+	<test name="Test on IE">
+    	<parameter name="browser" value="INTERNETEXPLORER" />
+    	<classes>
+      		<class name="tests.test"/>
+    	</classes>
+  	</test>	-->
+</suite>

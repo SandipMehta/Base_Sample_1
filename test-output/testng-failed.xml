@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestSuite1]" parallel="none">
+  <parameter name="browser" value="FIREFOX"/>
+  <test name="Test on firefox(failed)" parallel="none">
+    <parameter name="browser" value="FIREFOX"/>
+    <classes>
+      <class name="tests.test">
+        <methods>
+          <include name="skipTest"/>
+          <include name="startTest"/>
+          <include name="getResult"/>
+          <include name="failTest"/>
+          <include name="teardown"/>
+          <include name="endReport"/>
+        </methods>
+      </class> <!-- tests.test -->
+    </classes>
+  </test> <!-- Test on firefox(failed) -->
+</suite> <!-- Failed suite [TestSuite1] -->
