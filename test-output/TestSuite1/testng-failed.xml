@@ -13,6 +13,7 @@
           <include name="failTest"/>
           <include name="teardown"/>
           <include name="endReport"/>
+          <include name="firstTest"/>
         </methods>
       </class> <!-- tests.test -->
     </classes>

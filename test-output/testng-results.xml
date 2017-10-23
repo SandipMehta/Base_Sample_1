@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="1" total="4" passed="2">
+<testng-results skipped="1" failed="2" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="TestSuite1" duration-ms="14338" started-at="2017-10-12T14:33:03Z" finished-at="2017-10-12T14:33:17Z">
+  <suite name="TestSuite1" duration-ms="24726" started-at="2017-10-23T14:15:38Z" finished-at="2017-10-23T14:16:02Z">
     <groups>
     </groups>
-    <test name="Test on firefox" duration-ms="14338" started-at="2017-10-12T14:33:03Z" finished-at="2017-10-12T14:33:17Z">
+    <test name="Test on firefox" duration-ms="24726" started-at="2017-10-23T14:15:38Z" finished-at="2017-10-23T14:16:02Z">
       <class name="tests.test">
-        <test-method status="PASS" signature="startTest(java.lang.String)[pri:0, instance:tests.test@1bce4f0a]" name="startTest" is-config="true" duration-ms="9412" started-at="2017-10-12T20:03:03Z" finished-at="2017-10-12T20:03:12Z">
+        <test-method status="PASS" signature="startTest(java.lang.String)[pri:0, instance:tests.test@1bce4f0a]" name="startTest" is-config="true" duration-ms="23344" started-at="2017-10-23T19:45:38Z" finished-at="2017-10-23T19:46:01Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="FAIL" signature="failTest()[pri:0, instance:tests.test@1bce4f0a]" name="failTest" duration-ms="9" started-at="2017-10-12T20:03:12Z" finished-at="2017-10-12T20:03:12Z">
+        <test-method status="FAIL" signature="failTest()[pri:0, instance:tests.test@1bce4f0a]" name="failTest" duration-ms="8" started-at="2017-10-23T19:46:01Z" finished-at="2017-10-23T19:46:01Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -29,7 +29,7 @@
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertTrue(Assert.java:42)
 	at org.testng.Assert.assertTrue(Assert.java:52)
-	at tests.test.failTest(test.java:116)
+	at tests.test.failTest(test.java:118)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -60,7 +60,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failTest -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.test@1bce4f0a]" name="getResult" is-config="true" duration-ms="83" started-at="2017-10-12T20:03:12Z" finished-at="2017-10-12T20:03:12Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.test@1bce4f0a]" name="getResult" is-config="true" duration-ms="108" started-at="2017-10-23T19:46:01Z" finished-at="2017-10-23T19:46:01Z">
           <params>
             <param index="0">
               <value>
@@ -71,26 +71,58 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="firstTest()[pri:0, instance:tests.test@1bce4f0a]" name="firstTest" duration-ms="3955" started-at="2017-10-12T20:03:12Z" finished-at="2017-10-12T20:03:16Z">
+        <test-method status="FAIL" signature="firstTest()[pri:0, instance:tests.test@1bce4f0a]" name="firstTest" duration-ms="158" started-at="2017-10-23T19:46:01Z" finished-at="2017-10-23T19:46:01Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at tests.test.firstTest(test.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstTest -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.test@1bce4f0a]" name="getResult" is-config="true" duration-ms="0" started-at="2017-10-12T20:03:16Z" finished-at="2017-10-12T20:03:16Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.test@1bce4f0a]" name="getResult" is-config="true" duration-ms="83" started-at="2017-10-23T19:46:01Z" finished-at="2017-10-23T19:46:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=firstTest status=SUCCESS method=test.firstTest()[pri:0, instance:tests.test@1bce4f0a] output={null}]]]>
+                <![CDATA[[TestResult name=firstTest status=FAILURE method=test.firstTest()[pri:0, instance:tests.test@1bce4f0a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="passTest()[pri:0, instance:tests.test@1bce4f0a]" name="passTest" duration-ms="1" started-at="2017-10-12T20:03:16Z" finished-at="2017-10-12T20:03:16Z">
+        <test-method status="PASS" signature="passTest()[pri:0, instance:tests.test@1bce4f0a]" name="passTest" duration-ms="3" started-at="2017-10-23T19:46:01Z" finished-at="2017-10-23T19:46:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passTest -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.test@1bce4f0a]" name="getResult" is-config="true" duration-ms="0" started-at="2017-10-12T20:03:16Z" finished-at="2017-10-12T20:03:16Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.test@1bce4f0a]" name="getResult" is-config="true" duration-ms="4" started-at="2017-10-23T19:46:01Z" finished-at="2017-10-23T19:46:01Z">
           <params>
             <param index="0">
               <value>
@@ -101,14 +133,14 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="SKIP" signature="skipTest()[pri:0, instance:tests.test@1bce4f0a]" name="skipTest" duration-ms="1" started-at="2017-10-12T20:03:16Z" finished-at="2017-10-12T20:03:16Z">
+        <test-method status="SKIP" signature="skipTest()[pri:0, instance:tests.test@1bce4f0a]" name="skipTest" duration-ms="2" started-at="2017-10-23T19:46:01Z" finished-at="2017-10-23T19:46:01Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipping - This is not ready for testing]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: Skipping - This is not ready for testing
-	at tests.test.skipTest(test.java:123)
+	at tests.test.skipTest(test.java:125)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -139,7 +171,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- skipTest -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.test@1bce4f0a]" name="getResult" is-config="true" duration-ms="1" started-at="2017-10-12T20:03:16Z" finished-at="2017-10-12T20:03:16Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.test@1bce4f0a]" name="getResult" is-config="true" duration-ms="0" started-at="2017-10-23T19:46:01Z" finished-at="2017-10-23T19:46:01Z">
           <params>
             <param index="0">
               <value>
@@ -150,29 +182,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:tests.test@1bce4f0a]" name="endReport" is-config="true" duration-ms="251" started-at="2017-10-12T20:03:16Z" finished-at="2017-10-12T20:03:17Z">
+        <test-method status="PASS" signature="endReport()[pri:0, instance:tests.test@1bce4f0a]" name="endReport" is-config="true" duration-ms="386" started-at="2017-10-23T19:46:01Z" finished-at="2017-10-23T19:46:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-        <test-method status="FAIL" signature="teardown()[pri:0, instance:tests.test@1bce4f0a]" name="teardown" is-config="true" duration-ms="0" started-at="2017-10-12T20:03:17Z" finished-at="2017-10-12T20:03:17Z">
+        <test-method status="FAIL" signature="teardown()[pri:0, instance:tests.test@1bce4f0a]" name="teardown" is-config="true" duration-ms="0" started-at="2017-10-23T19:46:02Z" finished-at="2017-10-23T19:46:02Z">
           <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
               <![CDATA[Session ID is null. Using WebDriver after calling quit()?
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'ZEST14', ip: '10.33.36.87', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_144'
+System info: host: 'ZEST14', ip: '192.168.1.141', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_144'
 Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'ZEST14', ip: '10.33.36.87', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_144'
+System info: host: 'ZEST14', ip: '192.168.1.141', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_144'
 Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
 	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:523)
-	at tests.test.teardown(test.java:142)
+	at tests.test.teardown(test.java:144)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)

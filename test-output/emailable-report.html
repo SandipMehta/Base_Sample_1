@@ -31,32 +31,32 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Test on firefox</td><td class="numi">2</td><td class="numi">2</td><td class="numi_attn">1</td><td class="numi_attn">1</td><td class="numi">14.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Test on firefox</td><td class="numi">1</td><td class="numi">1</td><td class="numi_attn">1</td><td class="numi_attn">2</td><td class="numi">24.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">Test on firefox &#8212; failed (configuration methods)</th></tr>
-<tr class="failedodd"><td rowspan="1">tests.test</td><td><a href="#m1"><b>teardown</b>  </a></td><td class="numi">1</td><td>1507818797191</td><td class="numi">0</td></tr>
+<tr class="failedodd"><td rowspan="1">tests.test</td><td><a href="#m1"><b>teardown</b>  </a></td><td class="numi">1</td><td>1508768162214</td><td class="numi">0</td></tr>
 <tr><th colspan="4">Test on firefox &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">tests.test</td><td><a href="#m2"><b>failTest</b>  </a></td><td class="numi">1</td><td>1507818792883</td><td class="numi">9</td></tr>
+<tr class="failedodd"><td rowspan="2">tests.test</td><td><a href="#m2"><b>failTest</b>  </a></td><td class="numi">1</td><td>1508768161455</td><td class="numi">8</td></tr><tr class="failedodd"><td><a href="#m3"><b>firstTest</b>  </a></td><td class="numi">1</td><td>1508768161574</td><td class="numi">158</td></tr>
 <tr><th colspan="4">Test on firefox &#8212; skipped</th></tr>
-<tr class="skippedodd"><td rowspan="1">tests.test</td><td><a href="#m3"><b>skipTest</b>  </a></td><td class="numi">1</td><td>1507818796936</td><td class="numi">1</td></tr>
+<tr class="skippedodd"><td rowspan="1">tests.test</td><td><a href="#m4"><b>skipTest</b>  </a></td><td class="numi">1</td><td>1508768161824</td><td class="numi">2</td></tr>
 <tr><th colspan="4">Test on firefox &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="2">tests.test</td><td><a href="#m4"><b>firstTest</b>  </a></td><td class="numi">1</td><td>1507818792978</td><td class="numi">3955</td></tr><tr class="passedodd"><td><a href="#m5"><b>passTest</b>  </a></td><td class="numi">1</td><td>1507818796934</td><td class="numi">1</td></tr>
+<tr class="passedodd"><td rowspan="1">tests.test</td><td><a href="#m5"><b>passTest</b>  </a></td><td class="numi">1</td><td>1508768161816</td><td class="numi">3</td></tr>
 </table>
 <h1>Test on firefox</h1>
 <h2 id="m1">tests.test:teardown</h2>
 <div style="padding-left:3em">
 <p>Session ID is null. Using WebDriver after calling quit()?
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ZEST14&apos;, ip: &apos;10.33.36.87&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_144&apos;
+System info: host: &apos;ZEST14&apos;, ip: &apos;192.168.1.141&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_144&apos;
 Driver info: driver.version: RemoteWebDriver</p>
 org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:131)
 <br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
 <br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
 <br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
 <br/>at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:523)
-<br/>at tests.test.teardown(test.java:142)
+<br/>at tests.test.teardown(test.java:144)
 <br/>23 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
@@ -67,18 +67,24 @@ org.testng.Assert.fail(Assert.java:94)
 <br/>at org.testng.Assert.failNotEquals(Assert.java:494)
 <br/>at org.testng.Assert.assertTrue(Assert.java:42)
 <br/>at org.testng.Assert.assertTrue(Assert.java:52)
-<br/>at tests.test.failTest(test.java:116)
+<br/>at tests.test.failTest(test.java:118)
 <br/>25 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">tests.test:skipTest</h2>
+<h2 id="m3">tests.test:firstTest</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+<br/>at tests.test.firstTest(test.java:75)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">tests.test:skipTest</h2>
 <div style="padding-left:3em">
 <p>Skipping - This is not ready for testing</p>
-tests.test.skipTest(test.java:123)
+tests.test.skipTest(test.java:125)
 <br/>25 lines not shown
 </div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">tests.test:firstTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 <h2 id="m5">tests.test:passTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>

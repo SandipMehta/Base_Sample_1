@@ -9,6 +9,8 @@ import java.util.List;
 import com.opencsv.CSVReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+
+import org.eclipse.jetty.http.pathmap.RegexPathSpec;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -21,7 +23,7 @@ import util.GetScreenShot;
 import util.ReadCSV;
 import core.browsers;
 import com.opencsv.*;
-
+import util.RepositoryParser;
 public class test extends browsers{
 	
 //	public static String driverPath = "C:\\Automation\\Selenium\\workspace\\Base_Sample_1\\drivers";
@@ -50,13 +52,14 @@ public class test extends browsers{
 	}
 
 	@Test
-	public void firstTest() throws FileNotFoundException {
+	public void firstTest() throws IOException {
 		
 		logger = extent.startTest("First Test");
 		String dataPath = System.getProperty("user.dir") +"\\data\\data.csv";
 		registerDetail regDetail = new registerDetail();
 		//csvreader.readCSVFile(dataPath);
 		csvreader = new CSVReader(new FileReader(dataPath));
+		RepositoryParser repParser = new RepositoryParser(System.getProperty("user.dir")+"\\src\\tests\\properties\\ObjectRepo.properties");
 		try {
 			List<String[]> records = csvreader.readAll();
 			Iterator<String[]> iterator = records.iterator();
@@ -70,22 +73,23 @@ public class test extends browsers{
 				
 				// Clear the fields and Insert new values in fields:
 				driver.findElement(By.xpath(".//*[@id='username--20']")).clear(); 
-				driver.findElement(By.xpath(".//*[@id='username--20']")).sendKeys(regDetail.getname());
+				//driver.findElement(By.xpath(".//*[@id='username--20']")).sendKeys(regDetail.getname());
+				driver.findElement(repParser.getObjectLocator("UserName")).sendKeys(regDetail.getname());
 				
 				driver.findElement(By.xpath(".//*[@id='email--21']")).clear(); 
-				driver.findElement(By.xpath(".//*[@id='email--21']")).sendKeys(regDetail.getemail());
+				driver.findElement(repParser.getObjectLocator("Email")).sendKeys(regDetail.getemail());
 				
 				driver.findElement(By.xpath(".//*[@id='emailConfirm--22']")).clear(); 
-				driver.findElement(By.xpath(".//*[@id='emailConfirm--22']")).sendKeys(regDetail.getconfirmemail());
+				driver.findElement(repParser.getObjectLocator("ConfirmEmail")).sendKeys(regDetail.getconfirmemail());
 				
 				driver.findElement(By.xpath(".//*[@id='password--23']")).clear(); 
-				driver.findElement(By.xpath(".//*[@id='password--23']")).sendKeys(regDetail.getpassword());
+				driver.findElement(repParser.getObjectLocator("Password")).sendKeys(regDetail.getpassword());
 				
 				driver.findElement(By.xpath(".//*[@id='devSkills--24']")).clear(); 
-				driver.findElement(By.xpath(".//*[@id='devSkills--24']")).sendKeys(regDetail.getdevskills());
+				driver.findElement(repParser.getObjectLocator("DevSkills")).sendKeys(regDetail.getdevskills());
 				
 				//Thread.sleep(1000);
-				driver.findElement(By.xpath(".//*[@id='terms--25']")).click();
+				driver.findElement(repParser.getObjectLocator("Terms")).click();
 				
 				//Thread.sleep(1000);
 				driver.findElement(By.xpath(".//*[@id='app']/div/div[4]/div[1]/form/div[7]/button[1]")).click();
